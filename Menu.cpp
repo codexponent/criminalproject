@@ -10,7 +10,9 @@ Menu::Menu()
 Menu::~Menu()
 {
 }
-
+/**
+ * Shows the Menu
+ */
 void Menu::showMenu(){
 	cout<<"Welconme To The Eastern Jail Criminal Records"<<endl;
 	cout<<"_________________"<<endl;
@@ -23,6 +25,9 @@ void Menu::showMenu(){
 	cout<<"-----------------"<<endl;
 }
 
+/**
+ * Sets the Menu
+ */
 void Menu::setMenu(){
 	cout<<"Enter Choice: ";
 	cin>>choice;

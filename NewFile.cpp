@@ -13,6 +13,9 @@ NewFile::~NewFile()
 {
 }
 
+/**
+ * Writes on the New File
+ */
 void NewFile::write(){
 	cfile.open("CriminalRecords.txt", ios::app|ios::ate|ios::out);
 	cl.setInfo();
@@ -20,6 +23,9 @@ void NewFile::write(){
 	cfile.close();
 }
 
+/**
+ * Reads the New File
+ */
 void NewFile::read(){
 	cfile.open("CriminalRecords.txt", ios::app|ios::ate|ios::in);
 	cfile.seekg(0);
@@ -29,6 +35,10 @@ void NewFile::read(){
 	cfile.close();
 }
 
+/**
+ * Updates the New File
+ * choice2: id of choosen number
+ */
 void NewFile::update(int choice2){
 	cfile.open("CriminalRecords.txt", ios::ate|ios::in|ios::out);
 	
@@ -43,6 +53,10 @@ void NewFile::update(int choice2){
 	
 }
 
+/**
+ * Removes the choosen data
+ * choice3: id of choosen number
+ */
 void NewFile::remove(int choice3){
 	int del, position, currentPosition;
 	currentPosition = 0;
@@ -76,6 +90,11 @@ void NewFile::remove(int choice3){
 	
 }
 
+/**
+ * Searches the choosen data
+ * searchId: id of choosen number
+ * searchName[20]: character of choosen string
+ */
 void NewFile::search(int searchId, char searchName[20]/*searchName == 0*/){
 	sd = searchId;
 	strcpy(se, searchName);
